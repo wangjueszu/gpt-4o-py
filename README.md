@@ -86,10 +86,6 @@ API_RATE_LIMIT=0.5  # 并发版本API限流间隔
 python task_helper.py
 ```
 
-<p align="center">
-  <img src="https://via.placeholder.com/600x300?text=任务管理器界面" alt="任务管理器界面" width="600"/>
-</p>
-
 通过直观的菜单界面：
 - 👁️ 查看所有任务
 - ➕ 创建新任务
