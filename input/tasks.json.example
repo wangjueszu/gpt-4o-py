@@ -1,0 +1,32 @@
+[
+  {
+    "name": "简单描述",
+    "prompt": "请描述这张图片中的内容。",
+    "images": ["example1.jpg"],
+    "model": "gpt-4o-image-vip"
+  },
+  {
+    "name": "风格重绘",
+    "prompt": "请将这张图片按照水彩画风格重新绘制，保持主体内容不变。",
+    "images": ["example2.jpg"],
+    "model": "gpt-4o-image-vip"
+  },
+  {
+    "name": "多图对比分析",
+    "prompt": "请比较这两张图片的异同点，并分析哪张效果更好。",
+    "images": ["compare1.jpg", "compare2.jpg"],
+    "model": "gpt-4o-image-vip"
+  },
+  {
+    "name": "创作贴纸",
+    "prompt": "请创作一套全新的 chibi sticker，共六个独特姿势，以用户形象为主角。第一款是双手比出剪刀手，俏皮地眨眼；第二款是泪眼汪汪，呈现可爱哭泣的表情；第三款是张开双臂，做出热情的拥抱姿势；第四款是侧卧入睡，靠着迷你枕头；第五款是自信满满地向前方伸手指；第六款是手势飞吻，周围飘散出爱心表情。",
+    "images": ["user_photo.jpg"],
+    "model": "gpt-4o-image-vip"
+  },
+  {
+    "name": "无图文本处理",
+    "prompt": "请帮我写一篇关于人工智能应用在医疗领域的文章大纲，包含5个主要部分，每部分3-4个要点。",
+    "images": [],
+    "model": "gpt-4o-image-vip"
+  }
+] 
