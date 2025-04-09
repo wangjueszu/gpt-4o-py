@@ -10,12 +10,14 @@
 - 自动保存生成的文本和图片
 - 详细的日志和任务状态跟踪
 - 任务管理辅助工具，方便创建和编辑任务
+- 提供顺序处理和并发处理两个版本
 
 ## 目录结构
 
 ```
 /
-├── gpt-4o-batch.py      # 批量处理脚本
+├── gpt-4o-batch.py      # 顺序批量处理脚本
+├── gpt-4o-concurrent.py # 并发批量处理脚本
 ├── task_helper.py       # 任务管理辅助工具
 ├── .env                 # 环境变量配置 (从.env.template复制)
 ├── input/               # 输入目录
@@ -37,7 +39,7 @@
 确保已安装Python环境（Python 3.6+）和所需依赖库：
 
 ```bash
-pip install requests python-dotenv
+pip install requests python-dotenv concurrent.futures
 ```
 
 ### 2. 配置API密钥
@@ -53,7 +55,9 @@ cp .env.template .env
 ```
 API_TOKEN=your_api_token_here
 MODEL=gpt-4o-image-vip
-API_DELAY=2  # 任务间隔时间（可选）
+API_DELAY=2  # 顺序处理版本任务间隔时间（可选）
+MAX_WORKERS=5  # 并发处理版本最大线程数（可选）
+API_RATE_LIMIT=0.5  # 并发处理版本API限流间隔，单位秒（可选）
 ```
 
 ### 3. 创建任务配置
@@ -80,6 +84,8 @@ python task_helper.py
 
 ```bash
 python gpt-4o-batch.py
+# 或
+python gpt-4o-concurrent.py
 ```
 
 然后编辑`input/tasks.json`文件，添加您的任务：
@@ -111,11 +117,33 @@ python gpt-4o-batch.py
 
 ### 5. 运行批处理
 
+#### 顺序处理版本
+
 ```bash
 python gpt-4o-batch.py
 ```
 
-脚本将按顺序处理所有任务，并将结果保存在`output/`目录中。
+顺序处理版本按照任务顺序一个接一个地处理，中间有设定的延迟时间。
+
+#### 并发处理版本
+
+```bash
+python gpt-4o-concurrent.py
+```
+
+并发处理版本同时处理多个任务，大幅提高处理效率，并提供实时进度和预计完成时间。
+
+## 两个版本的对比
+
+| 功能 | 顺序处理 (gpt-4o-batch.py) | 并发处理 (gpt-4o-concurrent.py) |
+|------|----------------------------|--------------------------------|
+| 处理方式 | 按顺序逐个处理 | 多线程并发处理 |
+| 处理速度 | 较慢 | 较快（取决于设置的并发数） |
+| 性能消耗 | 较低 | 较高 |
+| 适用场景 | 任务数量少，对API调用有严格限制 | 任务数量多，需要快速处理 |
+| 进度显示 | 简单 | 详细（含进度百分比、预计完成时间） |
+| 限流方式 | 固定间隔 | 令牌桶算法 |
+| 配置参数 | API_DELAY | MAX_WORKERS, API_RATE_LIMIT |
 
 ## tasks.json 配置参数
 
@@ -171,4 +199,5 @@ pip install -r requirements.txt
 - 请确保您的API密钥有效且有足够的额度
 - 图片数量不能超过10张
 - 处理大量任务时，请注意API调用限制
-- 默认任务之间有2秒的延迟，可在.env文件中通过API_DELAY参数调整 
+- 默认并发数为5，可在.env文件中通过MAX_WORKERS参数调整
+- 并发处理时，为避免API限流，已内置令牌桶限流算法，默认每个请求间隔0.5秒 
