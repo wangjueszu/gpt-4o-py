@@ -1,18 +1,34 @@
-# GPT-4o 批量处理工具
+# 🚀 GPT-4o 批量处理工具
 
-这是一个用于批量调用 gpt-4o-image-vip 及相关模型的脚本，可以处理多组提示词和图片，并获取生成结果。
+<div align="center">
 
-## 功能特点
+![Version](https://img.shields.io/badge/版本-1.0-blue)
+![Python](https://img.shields.io/badge/Python-3.6+-brightgreen)
+![License](https://img.shields.io/badge/许可证-MIT-orange)
 
-- 支持批量处理多个任务
-- 每个任务可以使用不同的提示词和图片
-- 支持无图、单图或多图（最多10张）的请求
-- 自动保存生成的文本和图片
-- 详细的日志和任务状态跟踪
-- 任务管理辅助工具，方便创建和编辑任务
-- 提供顺序处理和并发处理两个版本
+**解锁 GPT-4o 的无限可能 | 一次处理成百上千任务 | 多模态批量生成**
 
-## 目录结构
+## 准备工作
+
+在开始使用本工具前，请先完成以下准备：
+
+1. 访问 [兔子 API Token 页面](https://api.tu-zi.com/token) 创建您的 API Token
+2. 记录 API 信息：
+   - 对话请求地址: `https://api.tu-zi.com/v1/chat/completions`
+
+### 2️⃣ 选择合适的模型
+
+根据您的需求选择最适合的模型：
+
+| 模型 | 计费方式 | 价格 | 稳定性 | 最佳用途 |
+|------|---------|------|-------|----------|
+| **gpt-4o-all** | 按token | 💰 | ⭐⭐⭐ | 小规模使用 |
+| **gpt-4o-image** | 按次 | 💰 | ⭐⭐ | 个人自用 |
+| **gpt-4o-image-vip** | 按次 | 💰💰 | ⭐⭐⭐⭐⭐ | 关键业务需求 |
+
+> 💡 **专家提示**：对于重要项目，推荐使用 gpt-4o-image-vip 以获得最佳稳定性和性能。
+
+## 📂 目录结构
 
 ```
 /
@@ -32,19 +48,19 @@
         └── [图片文件].png     # 下载的图片
 ```
 
-## 使用步骤
+## 📋 使用方法
 
-### 1. 环境准备
+### 🔧 环境准备
 
-确保已安装Python环境（Python 3.6+）和所需依赖库：
+确保安装了Python 3.6+和所需依赖：
 
 ```bash
 pip install requests python-dotenv concurrent.futures
 ```
 
-### 2. 配置API密钥
+### 🔑 配置API密钥
 
-复制`.env.template`文件为`.env`，并填写您的API密钥：
+设置您的API凭证：
 
 ```bash
 cp .env.template .env
@@ -55,69 +71,63 @@ cp .env.template .env
 ```
 API_TOKEN=your_api_token_here
 MODEL=gpt-4o-image-vip
-API_DELAY=2  # 顺序处理版本任务间隔时间（可选）
-MAX_WORKERS=5  # 并发处理版本最大线程数（可选）
-API_RATE_LIMIT=0.5  # 并发处理版本API限流间隔，单位秒（可选）
+API_DELAY=2  # 顺序处理版本间隔
+MAX_WORKERS=5  # 并发处理版本线程数
+API_RATE_LIMIT=0.5  # 并发版本API限流间隔
 ```
 
-### 3. 创建任务配置
+### 📝 创建任务
 
-#### 方法一：使用任务管理辅助工具（推荐）
-
-运行任务管理辅助工具：
+#### ✨ 方法一：使用交互式任务管理器（推荐）
 
 ```bash
 python task_helper.py
 ```
 
-通过交互式菜单可以：
-- 查看所有任务
-- 创建新任务
-- 编辑现有任务
-- 删除任务
-- 导入示例任务
-- 备份任务文件
+<p align="center">
+  <img src="https://via.placeholder.com/600x300?text=任务管理器界面" alt="任务管理器界面" width="600"/>
+</p>
 
-#### 方法二：手动编辑任务文件
+通过直观的菜单界面：
+- 👁️ 查看所有任务
+- ➕ 创建新任务
+- ✏️ 编辑现有任务
+- 🗑️ 删除任务
+- 📥 导入示例任务
+- 💾 备份任务文件
 
-首次运行批处理脚本将自动创建示例任务配置文件`input/tasks.json`：
+#### 方法二：手动配置
+
+运行以下命令创建示例配置：
 
 ```bash
 python gpt-4o-batch.py
-# 或
-python gpt-4o-concurrent.py
 ```
 
-然后编辑`input/tasks.json`文件，添加您的任务：
+然后编辑`input/tasks.json`文件：
 
 ```json
 [
   {
-    "name": "任务1",
-    "prompt": "请描述这张图片。",
-    "images": ["image1.jpg"],
+    "name": "产品描述生成",
+    "prompt": "请为这款产品创建一段吸引人的营销描述。",
+    "images": ["product1.jpg"],
     "model": "gpt-4o-image-vip"
   },
   {
-    "name": "任务2",
-    "prompt": "请创作一套全新的 chibi sticker，共六个独特姿势，以用户形象为主角。",
-    "images": ["image2.jpg"],
+    "name": "表情包创作",
+    "prompt": "请创作一套全新的chibi sticker，共六个独特姿势，以用户形象为主角。",
+    "images": ["character.jpg"],
     "model": "gpt-4o-image-vip"
   }
 ]
 ```
 
-您也可以参考`input/tasks.json.example`中的示例任务配置。
+### 🖼️ 准备图片
 
-### 4. 准备图片
+将图片放入`input/images/`目录，然后在任务中引用它们。
 
-将需要处理的图片放在`input/images/`目录下，并在任务配置中引用它们。
-
-图片路径可以是相对于`input/images/`的相对路径，也可以是绝对路径。
-
-### 5. 运行批处理
-
-#### 顺序处理版本
+### ▶️  顺序处理版本
 
 ```bash
 python gpt-4o-batch.py
@@ -154,16 +164,16 @@ python gpt-4o-concurrent.py
 | name | 字符串 | 是 | 任务名称 |
 | prompt | 字符串 | 是 | 提示词 |
 | images | 数组 | 否 | 图片文件名数组（最多10张） |
-| model | 字符串 | 否 | 使用的模型（默认为环境变量中设置的值） |
+| model | 字符串 | 否 | 使用的模型（默认为环境变量中设置的值）。可选值: gpt-4o-all、gpt-4o-image、gpt-4o-image-vip |
 
-## 输出说明
+## 📊 输出说明
 
-每个任务会在`output/`目录下创建一个独立的文件夹，命名格式为`[任务ID]_[任务名称]`，包含以下文件：
+每个任务在`output/`目录下创建独立文件夹：
 
-- `task_info.json`：任务配置信息
-- `response.json`：API原始响应
-- `response_text.md`：生成的文本内容
-- 图片文件：下载的所有生成图片
+- 📄 `task_info.json` - 任务配置信息
+- 📄 `response.json` - 原始API响应
+- 📄 `response_text.md` - 生成的文本内容
+- 🖼️ 生成的图片文件
 
 ## GitHub使用说明
 
@@ -201,3 +211,9 @@ pip install -r requirements.txt
 - 处理大量任务时，请注意API调用限制
 - 默认并发数为5，可在.env文件中通过MAX_WORKERS参数调整
 - 并发处理时，为避免API限流，已内置令牌桶限流算法，默认每个请求间隔0.5秒 
+
+<div align="center">
+  <p>如果这个工具对您有帮助，请考虑给我们的仓库点个⭐️</p>
+  <p>有问题或建议？<a href="mailto:wangjueszu@outlook.com">联系我们</a> </p>
+  
+</div> 
