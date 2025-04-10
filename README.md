@@ -168,17 +168,17 @@ python gpt-4o-concurrent.py
 
 以下是使用本工具生成的一些实际案例，展示了不同场景下GPT-4o的多模态能力。
 
-### 🎎 中式婚礼Q版3D人物
+### 🎎 中式婚礼Q版3D人物 -by [贝壳里奇](https://x.com/balconychy)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/1.png" width="300" alt="中式婚礼Q版3D人物">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/1-old.jpg)
 
 **提示词**：
 ```
-将照片里的两个人转换成Q版3D人物，中式古装婚礼，大红颜色，背景囍字剪纸风格图案。 服饰要求：写实，男士身着长袍马褂，主体为红色，上面以金色绣龙纹图案，彰显尊贵大气 ，胸前系着大红花，寓意喜庆吉祥。女士所穿是秀禾服，同样以红色为基调，饰有精美的金色花纹与凤凰刺绣，展现出典雅华丽之感 ，头上搭配花朵发饰，增添柔美温婉气质。二者皆为中式婚礼中经典着装，蕴含着对新人婚姻美满的祝福。 头饰要求： 男士：中式状元帽，主体红色，饰有金色纹样，帽顶有精致金饰，尽显传统儒雅庄重。 女士：凤冠造型,以红色花朵为中心,搭配金色立体装饰与垂坠流苏,华丽富贵,古典韵味十足。注意面部特征保持一致。aspect_ratio: 3:4
+将照片里的两个人转换成Q版3D人物，中式古装婚礼，大红颜色，背景囍字剪纸风格图案。 服饰要求：写实，男士身着长袍马褂，主体为红色，上面以金色绣龙纹图案，彰显尊贵大气 ，胸前系着大红花，寓意喜庆吉祥。女士所穿是秀禾服，同样以红色为基调，饰有精美的金色花纹与凤凰刺绣，展现出典雅华丽之感 ，头上搭配花朵发饰，增添柔美温婉气质。二者皆为中式婚礼中经典着装，蕴含着对新人婚姻美满的祝福。 头饰要求： 男士：中式状元帽，主体红色，饰有金色纹样，帽顶有精致金饰，尽显传统儒雅庄重。 女士：凤冠造型,以红色花朵为中心,搭配金色立体装饰与垂坠流苏,华丽富贵,古典韵味十足。注意面部特征保持一致。
 ```
 
-### 💍 求婚场景Q版3D人物
+### 💍 求婚场景Q版3D人物-by [贝壳里奇](https://x.com/balconychy)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/2.png" width="300" alt="求婚场景Q版3D人物">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/2-old.jpg)
@@ -188,7 +188,7 @@ python gpt-4o-concurrent.py
 将照片里的两个人转换成Q版3D人物，场景换成求婚，背景换成淡雅五彩花瓣做的拱门，背景换成浪漫颜色，地上散落着玫瑰花瓣。除了人物采用Q版3D人物风格，其他环境采用真实写实风格。注意面部特征保持一致
 ```
 
-### 🎨 吉卜力风格化
+### 🎨 吉卜力风格化 -by [兔子](https://x.com/ovst36099)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/3.png" width="300" alt="吉卜力风格化">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/3-old.jpg)
@@ -198,7 +198,7 @@ python gpt-4o-concurrent.py
 依据图片内容，将其转化为千与千寻、风之谷那样画风的图画；注意保持人物、场景、色彩一致。
 ```
 
-### 🎁 双人浪漫3D摆件
+### 🎁 双人浪漫3D摆件 -by [宝玉]（https://x.com/dotey）
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/4.png" width="300" alt="双人浪漫3D摆件">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/4-old.jpg)
@@ -208,7 +208,7 @@ python gpt-4o-concurrent.py
 根据照片上的内容打造一款细致精美、萌趣可爱的3D渲染收藏摆件，装置在柔和粉彩色调、温馨浪漫的展示盒中。展示盒为浅奶油色搭配柔和的金色装饰，形似精致的便携珠宝盒。打开盒盖，呈现出一幕温暖浪漫的场景：两位Q版角色正甜蜜相望。盒顶雕刻着某某某（见文末）的字样，周围点缀着小巧精致的星星与爱心图案。盒内站着照片上的女性，手中捧着一束小巧的白色花束。她的身旁是她的伴侣，照片上的男性。两人都拥有大而闪亮、充满表现力的眼睛，以及柔和、温暖的微笑，传递出浓浓的爱意和迷人的气质。他们身后有一扇圆形窗户，透过窗户能看到阳光明媚的中国古典小镇天际线和轻柔飘浮的云朵。盒内以温暖的柔和光线进行照明，背景中漂浮着花瓣点缀气氛。整个展示盒和角色的色调优雅和谐，营造出一个奢华而梦幻的迷你纪念品场景。某某某的具体内容为：我爱你。
 ```
 
-### 🧸 公仔包装盒
+### 🧸 公仔包装盒 -by [宝玉]（https://x.com/dotey）
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/5.png" width="300" alt="公仔包装盒">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/5-old.jpg)
@@ -220,7 +220,7 @@ python gpt-4o-concurrent.py
 标题为雷总，日常必备物品帽子、鞋子、耳坠。
 ```
 
-### 📝 手绘信息图表卡
+### 📝 手绘信息图表卡  -by [兔子](https://x.com/ovst36099)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/6-small.png" width="300" alt="手绘信息图表卡">
 
 **提示词**：
@@ -230,7 +230,7 @@ python gpt-4o-concurrent.py
 文案布局方面，设置**醒世三问**朱砂大标题，接着是三句话：1. 执念何所缚？配有解绳的简笔插画；2. 心镜可明台？配有拭镜的小插图；3. 浮云归处是？绘有远山和飞鸟的场景。
 ```
 
-### 🔮 Q版牵手穿越
+### 🔮 Q版牵手穿越 -by [宝玉]（https://x.com/dotey）
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/8.png" width="300" alt="Q版牵手穿越">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/8-old.jpg)
@@ -242,7 +242,7 @@ python gpt-4o-concurrent.py
 现实世界一个典型的程序员的书房，有书桌，显示器和笔记本电脑。
 ```
 
-### 🧙‍♂️ 分帽院
+### 🧙‍♂️ 分帽院 -by [-Zho-](https://x.com/ZHO_ZHO_ZHO)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/9.png" width="300" alt="分帽院">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/9-old.jpg)
@@ -252,7 +252,7 @@ python gpt-4o-concurrent.py
 先根据上传的图片人物特点分配到，狮院：勇敢、活力、骑士精神和正义感；蛇院：野心、精明、重视荣耀、胜利至上；鹰院：机敏、聪慧和博学 ；猩院：正直、忠诚、诚实和不畏辛苦。然后每个学院对应不同颜色和象征，狮院：狮子，代表元素为火，颜色为红色和金色；蛇院：蛇，代表元素为水，颜色为绿色和银色 ；鹰院：鹰，代表元素为风，颜色为蓝色和青铜色 ；猩院：猩猩，代表元素为土，颜色为黄色和黑色 。生成人物背景和元素就要自配所属学院 ，把图片中的人物头像Q版人像大头照，图形渐变背景区域，保持学院特点，随时添加一些魔法小道具，如猫头鹰、魔杖等。
 ```
 
-### 📱 Q版APP图标
+### 📱 Q版APP图标 -by [宝玉]（https://x.com/dotey）
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/10.png" width="300" alt="Q版APP图标">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/10-old.jpg)
@@ -262,7 +262,7 @@ python gpt-4o-concurrent.py
 把这张照片设计成一个3D风格的Q版APP图标，保留人物特征，风格要可爱一些，人物要稍微超出图标背景边框。
 ```
 
-### 🚽 极简主义3D插画
+### 🚽 极简主义3D插画 -by [宝玉]（https://x.com/dotey）
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/11-small.png" width="300" alt="极简主义3D插画">
 
 **提示词**：
@@ -272,7 +272,7 @@ python gpt-4o-concurrent.py
 画的内容是一个马桶。
 ```
 
-### 👚 9宫格试衣服
+### 👚 9宫格试衣服  -by [兔子](https://x.com/ovst36099)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/12.png" width="300" alt="9宫格试衣服">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/12-old.jpg)
@@ -282,7 +282,7 @@ python gpt-4o-concurrent.py
 使用九宫格的方式给模特穿上不同流行款衣服，请保持人物面部、主体特征一致。
 ```
 
-### 🔮 3D Q版水晶球
+### 🔮 3D Q版水晶球 -by [贝壳里奇](https://x.com/balconychy)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/13.png" width="300" alt="3D Q版水晶球">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/13-old.jpg)
@@ -292,7 +292,7 @@ python gpt-4o-concurrent.py
 将附图中的人物转换成水晶球场景。 整体环境：水晶球放在窗户旁桌面上，背景模糊，暖色调。阳光透过球体，洒下点点金光，照亮了周围的黑暗。 水晶球内部：人物是可爱Q版3D造型，相互之间满眼的爱意。
 ```
 
-### 🐱 心中的灵兽
+### 🐱 心中的灵兽 -by [贝壳里奇](https://x.com/balconychy)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/14.png" width="300" alt="心中的灵兽">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/14-old.jpg)
@@ -302,7 +302,7 @@ python gpt-4o-concurrent.py
 画一个动物，头换成图中的人，并且将五官中的一个特征换成动物的特征。动物请根据人像的特征选择。
 ```
 
-### 💇 九宫格发型
+### 💇 九宫格发型  -by [兔子](https://x.com/ovst36099)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/15.png" width="300" alt="九宫格发型">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/15-old.jpg)
@@ -312,7 +312,7 @@ python gpt-4o-concurrent.py
 截图图片人物头像部分，已九宫格的方式生成这个人不同的发型头像，注意保持人物面部特征一致。
 ```
 
-### 👩‍✈️ 职业生成
+### 👩‍✈️ 职业生成 -by [-Zho-](https://x.com/ZHO_ZHO_ZHO)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/16.png" width="300" alt="职业生成">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/16-old.jpg)
