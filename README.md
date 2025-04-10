@@ -198,7 +198,7 @@ python gpt-4o-concurrent.py
 依据图片内容，将其转化为千与千寻、风之谷那样画风的图画；注意保持人物、场景、色彩一致。
 ```
 
-### 🎁 双人浪漫3D摆件 -by [宝玉]（https://x.com/dotey）
+### 🎁 双人浪漫3D摆件 -by [宝玉](https://x.com/dotey)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/4.png" width="300" alt="双人浪漫3D摆件">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/4-old.jpg)
@@ -208,7 +208,7 @@ python gpt-4o-concurrent.py
 根据照片上的内容打造一款细致精美、萌趣可爱的3D渲染收藏摆件，装置在柔和粉彩色调、温馨浪漫的展示盒中。展示盒为浅奶油色搭配柔和的金色装饰，形似精致的便携珠宝盒。打开盒盖，呈现出一幕温暖浪漫的场景：两位Q版角色正甜蜜相望。盒顶雕刻着某某某（见文末）的字样，周围点缀着小巧精致的星星与爱心图案。盒内站着照片上的女性，手中捧着一束小巧的白色花束。她的身旁是她的伴侣，照片上的男性。两人都拥有大而闪亮、充满表现力的眼睛，以及柔和、温暖的微笑，传递出浓浓的爱意和迷人的气质。他们身后有一扇圆形窗户，透过窗户能看到阳光明媚的中国古典小镇天际线和轻柔飘浮的云朵。盒内以温暖的柔和光线进行照明，背景中漂浮着花瓣点缀气氛。整个展示盒和角色的色调优雅和谐，营造出一个奢华而梦幻的迷你纪念品场景。某某某的具体内容为：我爱你。
 ```
 
-### 🧸 公仔包装盒 -by [宝玉]（https://x.com/dotey）
+### 🧸 公仔包装盒 -by [宝玉](https://x.com/dotey)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/5.png" width="300" alt="公仔包装盒">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/5-old.jpg)
@@ -230,7 +230,7 @@ python gpt-4o-concurrent.py
 文案布局方面，设置**醒世三问**朱砂大标题，接着是三句话：1. 执念何所缚？配有解绳的简笔插画；2. 心镜可明台？配有拭镜的小插图；3. 浮云归处是？绘有远山和飞鸟的场景。
 ```
 
-### 🔮 Q版牵手穿越 -by [宝玉]（https://x.com/dotey）
+### 🔮 Q版牵手穿越 -by [宝玉](https://x.com/dotey)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/8.png" width="300" alt="Q版牵手穿越">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/8-old.jpg)
@@ -252,7 +252,7 @@ python gpt-4o-concurrent.py
 先根据上传的图片人物特点分配到，狮院：勇敢、活力、骑士精神和正义感；蛇院：野心、精明、重视荣耀、胜利至上；鹰院：机敏、聪慧和博学 ；猩院：正直、忠诚、诚实和不畏辛苦。然后每个学院对应不同颜色和象征，狮院：狮子，代表元素为火，颜色为红色和金色；蛇院：蛇，代表元素为水，颜色为绿色和银色 ；鹰院：鹰，代表元素为风，颜色为蓝色和青铜色 ；猩院：猩猩，代表元素为土，颜色为黄色和黑色 。生成人物背景和元素就要自配所属学院 ，把图片中的人物头像Q版人像大头照，图形渐变背景区域，保持学院特点，随时添加一些魔法小道具，如猫头鹰、魔杖等。
 ```
 
-### 📱 Q版APP图标 -by [宝玉]（https://x.com/dotey）
+### 📱 Q版APP图标 -by [宝玉](https://x.com/dotey)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/10.png" width="300" alt="Q版APP图标">
 
 **原图**：[查看原图](https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/10-old.jpg)
@@ -262,7 +262,7 @@ python gpt-4o-concurrent.py
 把这张照片设计成一个3D风格的Q版APP图标，保留人物特征，风格要可爱一些，人物要稍微超出图标背景边框。
 ```
 
-### 🚽 极简主义3D插画 -by [宝玉]（https://x.com/dotey）
+### 🚽 极简主义3D插画 -by [宝玉](https://x.com/dotey)
 <img src="https://tuziai.oss-cn-shenzhen.aliyuncs.com/small/11-small.png" width="300" alt="极简主义3D插画">
 
 **提示词**：
