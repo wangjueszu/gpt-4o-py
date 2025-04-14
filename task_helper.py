@@ -67,6 +67,36 @@ def show_tasks(tasks):
         print(f"{i}. {name} [{model}] - 图片数量: {len(images)}")
         print(f"   提示词: {prompt_preview}")
     print("=" * 60)
+    
+def create_tasks():
+    """批量创建相同提示词任务"""
+    print("\n批量创建任务")
+    print("=" * 60)
+    
+    name = input("任务名称前缀: ")
+    prompt = input("提示词: ")
+    model = input("模型 (默认为gpt-4o-image-vip): ") or "gpt-4o-image-vip"
+    
+    # 获取所有可用图片
+    available_images = list_images()
+    if not available_images:
+        print("\n没有可用的图片。请将图片放在 input/images/ 目录下。")
+        return
+    
+    print(f"\n找到 {len(available_images)} 张图片，将为每张图片创建一个任务...")
+    
+    tasks = load_tasks()
+    for i, image in enumerate(available_images, 1):
+        task = {
+            "name": f"{name}_{i}",
+            "prompt": prompt,
+            "images": [image],
+            "model": model
+        }
+        tasks.append(task)
+    
+    save_tasks(tasks)
+    print(f"已批量创建 {len(available_images)} 个任务")
 
 def create_task():
     """创建新任务"""
@@ -246,6 +276,7 @@ def main_menu():
         print("4. 删除任务")
         print("5. 导入示例任务")
         print("6. 备份任务文件")
+        print("7. 批量创建任务")
         print("0. 退出")
         
         choice = input("\n请选择 [0-6]: ")
@@ -267,6 +298,9 @@ def main_menu():
             input("\n按回车键继续...")
         elif choice == '6':
             backup_tasks()
+            input("\n按回车键继续...")
+        elif choice == '7':
+            create_tasks()
             input("\n按回车键继续...")
         elif choice == '0':
             print("再见！")
