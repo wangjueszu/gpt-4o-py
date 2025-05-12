@@ -173,27 +173,33 @@ def process_task(task, task_id):
     
     # 遍历result，提取content字段中的图片地址并保存
     if "choices" in result and isinstance(result["choices"], list):
-        download_success = False
+        download_count = 0
         for choice in result["choices"]:
             if "message" in choice and "content" in choice["message"]:
                 content = choice["message"]["content"]
                 print(f"正在处理内容: {content[:100]}...")  # 只显示内容的前100个字符
-                
-                # 使用正则表达式提取markdown中的图片地址
-                matches = re.findall(r"!\[.*?\]\((https?://[^\s]+)\)", content)
-                for idx, image_url in enumerate(matches):
+
+                # 只提取 [点击下载](http...) 这种格式的图片链接
+                download_links = re.findall(r'\[点击下载\]\((https?://[^\s\)]+)\)', content)
+                for idx, image_url in enumerate(download_links):
                     try:
                         print(f"正在下载图片: {image_url}")
                         image_data = requests.get(image_url).content
-                        file_name = f"{result['id']}-{choice['index']}-{idx}.png"
+                        ext = "png"
+                        m = re.search(r"\.([a-zA-Z0-9]+)(?:\?|$)", image_url)
+                        if m:
+                            ext = m.group(1).split("?")[0]
+                            if len(ext) > 5:
+                                ext = "png"
+                        file_name = f"{result.get('id', 'noid')}-{choice.get('index', idx)}-{idx}.{ext}"
                         output_path = os.path.join(task_output_dir, file_name)
                         with open(output_path, "wb") as f:
                             f.write(image_data)
                         print(f"图片已保存到: {output_path}")
-                        download_success = True
+                        download_count += 1
                     except Exception as e:
                         print(f"无法下载图片数据: {image_url} - {e}")
-        if not download_success:
+        if download_count == 0:
             print("未成功下载任何图片。")
     else:
         print("返回值格式错误。")
